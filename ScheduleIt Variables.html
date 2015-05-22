@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://scheduleit.org/" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<!--Credentials-->
+<tr>
+	<td>store</td>
+	<td>devuser</td>
+	<td>devUser</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>##devuser##</td>
+	<td>devPassword</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>grosskey@gmail.com</td>
+	<td>adminUser</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>testing123</td>
+	<td>userPassword</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>schedulergrosskey@gmail.com</td>
+	<td>schedulerUser</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>http://www.dev.schedulit.org</td>
+	<td>devEnv</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>adjustergrosskey@gmail.com</td>
+	<td>adjusterUser</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>selfgrosskey@gmail.com</td>
+	<td>selfSchedulerUser</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>c:/Users/rgeroski/desktop/</td>
+	<td>desktopPath</td>
+</tr>
+<!--Date Variables-->
+<!--Grab current date and store as mm-dd-yyyy-->
+<tr>
+	<td>storeEval</td>
+	<td>var d=new Date(); (&quot;0&quot; + (d.getMonth() + 1)).slice(-2) +'-'+(&quot;0&quot; + d.getDate()).slice(-2)+'-'+d.getFullYear();</td>
+	<td>currentDate</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${currentDate}</td>
+	<td>currentDate</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${currentDate}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var d=new Date(); ((d.getMonth()))+'-'+(&quot;0&quot; + d.getDate()).slice(-2)+'-'+d.getFullYear();</td>
+	<td>lastMonth</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${lastMonth}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

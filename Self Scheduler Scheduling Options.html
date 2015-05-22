@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://scheduleit.org/" />
+<title>Self Scheduler Scheduling Options</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Self Scheduler Scheduling Options</td></tr>
+</thead><tbody>
+<!--Scheduling Options-->
+<tr>
+	<td>click</td>
+	<td>link=Scheduling Options</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Enter New Claim</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Show Schedule</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=List Appointments</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Manage Adjuster</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Manage Reports</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.btn</td>
+	<td></td>
+</tr>
+<!--New claim-->
+<tr>
+	<td>click</td>
+	<td>link=Enter New Claim</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=SchedulingType</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>Residential,Commercial</td>
+	<td>typesOptions</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${typesOptions}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeSelectOptions</td>
+	<td>id=SchedulingType</td>
+	<td>schedulingTypes</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${schedulingTypes}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=SchedulingType</td>
+	<td>Residential</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=SchedulingClaimId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeSelectOptions</td>
+	<td>id=SchedulingClaimId</td>
+	<td>claimTypes</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${claimTypes}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['claimTypes'].length</td>
+	<td>totalClaimTypes</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${totalClaimTypes}</td>
+	<td></td>
+</tr>
+<!--Testing the selection of Hail,Wind,etc. option-->
+<tr>
+	<td>store</td>
+	<td>6</td>
+	<td>claimTypeIndex</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['claimTypes'][storedVars['claimTypeIndex']]}</td>
+	<td>claimName</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${claimName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=SchedulingClaimId</td>
+	<td>${claimName}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=SchedulingInsuredCountry</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=SchedulingInsuredCountry</td>
+	<td>US</td>
+</tr>
+<!--Need to find out where the SchedulingFirmId comes from-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=SchedulingFirmId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=SchedulingFirmNo</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{Math.floor(Math.random()*9999999999999999)}</td>
+	<td>firmNo</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${firmNo}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=SchedulingFirmNo</td>
+	<td>${firmNo}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=SchedulingInsuredFname</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=SchedulingInsuredLname</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=SchedulingInsuredAddress</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=SchedulingAdditionalInsuredAddress</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=SchedulingInsuredCity</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=us</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=us_zip</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=SchedulingInsuredPhone1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=SchedulingInsuredPhone2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=SchedulingDateReceived</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=SchedulingTimeReceived</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=SchedulingLossNoticeInstruction</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=SchedulingInsuranceCompanyId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=SchedulingClaimNo</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=DocumentsDocTitle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=input.btn.submt_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>name=submitRoute</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.btn.refresh</td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeRandomFirstName</td>
+	<td>insuredFirstName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${insuredFirstName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=SchedulingInsuredFname</td>
+	<td>${insuredFirstName}</td>
+</tr>
+<tr>
+	<td>storeRandomLastName</td>
+	<td>insuredLastName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${insuredLastName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=SchedulingInsuredLname</td>
+	<td>${insuredLastName}</td>
+</tr>
+<tr>
+	<td>storeRandomStreetAddress</td>
+	<td>claimAddress</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${claimAddress}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=SchedulingInsuredAddress</td>
+	<td>${claimAddress}</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{Math.floor(Math.random()*999)}</td>
+	<td>unit</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${unit}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=SchedulingAdditionalInsuredAddress</td>
+	<td>${unit}</td>
+</tr>
+<tr>
+	<td>storeRandomCity</td>
+	<td>city</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${city}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=SchedulingInsuredCity</td>
+	<td>${city}</td>
+</tr>
+<tr>
+	<td>storeRandomAbbrState</td>
+	<td>state</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${state}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=us</td>
+	<td>${state}</td>
+</tr>
+<tr>
+	<td>storeRandomZipCode</td>
+	<td>zip</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=us_zip</td>
+	<td>${zip}</td>
+</tr>
+<tr>
+	<td>storeRandomAreaCode</td>
+	<td>areaCode</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeRandomPhonePrefix</td>
+	<td>phonePrefix</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeRandomPhoneSuffix</td>
+	<td>phoneSuffix</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=SchedulingInsuredPhone1</td>
+	<td>${areaCode}${phonePrefix}${phoneSuffix}</td>
+</tr>
+<tr>
+	<td>storeRandomPhoneNumber</td>
+	<td>phone2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=SchedulingInsuredPhone2</td>
+	<td>${phone2}</td>
+</tr>
+<!--Grab current date and store as mm-dd-yyyy-->
+<tr>
+	<td>storeEval</td>
+	<td>var d=new Date(); ((d.getMonth()+1))+'-'+(&quot;0&quot; + d.getDate()).slice(-2)+'-'+d.getFullYear();</td>
+	<td>today_hyphen</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${today_hyphen}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${today_hyphen}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=SchedulingDateReceived</td>
+	<td>${today_hyphen}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var d=new Date(); (('0' + d.getHours()).slice(-2)) +':'+(('0' + d.getMinutes()).slice(-2));</td>
+	<td>receiveTime</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${receiveTime}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=SchedulingTimeReceived</td>
+	<td>${receiveTime}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=SchedulingLossNoticeInstruction</td>
+	<td>Loss notice instructions. Will need to test the length of this field and support for special characters.</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=SchedulingInsuranceCompanyId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{Math.floor(Math.random()*9999999999999999)}</td>
+	<td>claimNo</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${claimNo}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=SchedulingClaimNo</td>
+	<td>${claimNo}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>name=submitRoute</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=submitRoute</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

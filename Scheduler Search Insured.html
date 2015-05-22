@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.dev.scheduleit.org/" />
+<title>Scheduler Search Insured</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Scheduler Search Insured</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/users/account</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Search Insured</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=lname</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=phoneno</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=lname</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=l_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=l_name</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=input.btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.tabs_involved</td>
+	<td>Appointments Details</td>
+</tr>
+<tr>
+	<td>storeTable</td>
+	<td>css=table.tablesorter1.1.0</td>
+	<td>tableRowOne</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${tableRowOne}</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

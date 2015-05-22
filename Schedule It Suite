@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="ScheduleIt Variables.html">ScheduleIt Variables</a></td></tr>
+<tr><td><a href="ScheduleIt Admin Login.html">ScheduleIt Admin Login</a></td></tr>
+<tr><td><a href="File Import Page.html">File Import Page</a></td></tr>
+<tr><td><a href="Scheduler Login.html">Scheduler Login</a></td></tr>
+<tr><td><a href="Self Scheduler Login.html">Self Scheduler Login</a></td></tr>
+<tr><td><a href="Scheduler Search Insured.html">Scheduler Search Insured</a></td></tr>
+<tr><td><a href="Self Scheduler Scheduling Options.html">Self Scheduler Scheduling Options</a></td></tr>
+<tr><td><a href="Self Scheduler Operations.html">Self Scheduler Operations</a></td></tr>
+<tr><td><a href="../../moodle-test-automation/Moodle 2.8/Create User and Date Variables.html">Create User and Date Variables</a></td></tr>
+<tr><td><a href="Self Scheduler Expenses.html">Self Scheduler Expenses</a></td></tr>
+</tbody></table>
+</body>
+</html>

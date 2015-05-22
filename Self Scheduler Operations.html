@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://dev.scheduleit.org/" />
+<title>Self Scheduler Operations</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Self Scheduler Operations</td></tr>
+</thead><tbody>
+<!--Search insured-->
+<tr>
+	<td>open</td>
+	<td>/users/account</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Search Insured</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=lname</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=l_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=l_name</td>
+	<td>Jones</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=input.btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=l_name</td>
+	<td>1234</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=input.btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.noresult</td>
+	<td>No Records Available</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=l_name</td>
+	<td>!@#$%</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=input.btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.noresult</td>
+	<td>No Records Available</td>
+</tr>
+<!--Sync-->
+<tr>
+	<td>click</td>
+	<td>link=Sync</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=grant_heading</td>
+	<td>Scheduleit would like to:</td>
+</tr>
+<!--Claims Received Report-->
+<tr>
+	<td>click</td>
+	<td>link=Claims Received Report</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Back to Options</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=AppointmentFromDate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=AppointmentToDate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=AppointmentFldName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=AppointmentFromDate</td>
+	<td>${lastMonth}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=AppointmentToDate</td>
+	<td>${currentDate}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=AppointmentFldName</td>
+	<td>Claim #</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=input.btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotAlert</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

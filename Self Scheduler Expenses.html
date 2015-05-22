@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://scheduleit.org/" />
+<title>Self Scheduler Expenses</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Self Scheduler Expenses</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/users/account</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Business Expenses</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Enter New</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Enter New</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=PersonalExpenseCategoryId</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeSelectOptions</td>
+	<td>id=PersonalExpenseCategoryId</td>
+	<td>expenseCategories</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>expenseIndex</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['expenseCategories'].length</td>
+	<td>totalExpenseCategories</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{storedVars['expenseCategories'][storedVars['expenseIndex']]}</td>
+	<td>expenseName</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${expenseName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=PersonalExpenseCategoryId</td>
+	<td>${expenseName}</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=PersonalExpenseExpenseDate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=PersonalExpenseExpenseDate</td>
+	<td>${currentDate}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=PersonalExpenseAmount</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=PersonalExpenseAmount</td>
+	<td>!@#$</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=PersonalExpensePaymentType</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeSelectOptions</td>
+	<td>id=PersonalExpensePaymentType</td>
+	<td>expensePayTypes</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${expensePayTypes}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=PersonalExpensePaymentType</td>
+	<td>Cash</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=PersonalExpenseComment</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=PersonalExpenseComment</td>
+	<td>Test invalid currency characters</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=submit2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=submit2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.formErrorContent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=PersonalExpenseAmount</td>
+	<td>!@#$.$$</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=submit2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.formErrorContent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=PersonalExpenseAmount</td>
+	<td>$AA.BB</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=submit2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.formErrorContent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=PersonalExpenseAmount</td>
+	<td>1234</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=submit2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>css=div.formErrorContent</td>
+	<td></td>
+</tr>
+<!--Check Expense-->
+<tr>
+	<td>click</td>
+	<td>link=Business Expenses</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=List Expenses</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=List Expenses</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='listing_expense']/table/tbody/tr[2]/td[2]</td>
+	<td>${expenseName}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=img.expense_edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=img.expense_edit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=amount_real</td>
+	<td>1234.00</td>
+</tr>
+<tr>
+	<td>verifyValue</td>
+	<td>id=PersonalExpenseExpenseDate</td>
+	<td>${currentDate}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=amount_real</td>
+	<td>$2334.00</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=submit2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=submit2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>200</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.formErrorContent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=amount_real</td>
+	<td>2334.00</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=amount_real</td>
+	<td>expenseAmount</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=submit2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.message_sucess &gt; u</td>
+	<td>Expense has been updated Successfully</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=cboxClose</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=cboxClose</td>
+	<td></td>
+</tr>
+<!--Income/Expense Report-->
+<tr>
+	<td>click</td>
+	<td>link=Income /Expense Report</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=select_report</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=select_report</td>
+	<td>Expense Report Summary by Category</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=AppointmentFromDate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=AppointmentToDate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=AppointmentFromDate</td>
+	<td>${currentDate}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=AppointmentToDate</td>
+	<td>${currentDate}</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=input.btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input.btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h3.tabs_involved</td>
+	<td>Report Section</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='tab1']/table/tbody/tr/td[3]</td>
+	<td>${expenseAmount}</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

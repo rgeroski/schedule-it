@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.dev.scheduleit.org/" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Sign In</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=UserEmail</td>
+	<td>${adminUser}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=UserPassword</td>
+	<td>${userPassword}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>class=btn-all</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.alert_success</td>
+	<td>Welcome to your account, You are logged In successfully.</td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>landingPage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${landingPage}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>/companies/dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=li.treeview &gt; a &gt; span</td>
+	<td>Manage Users</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.treeview &gt; a &gt; span</td>
+	<td>Manage Users</td>
+</tr>
+</tbody></table>
+</body>
+</html>
