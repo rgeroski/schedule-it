@@ -37,9 +37,39 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForText</td>
-	<td>css=div.alert_success</td>
-	<td>Welcome to your account, You are logged In successfully.</td>
+	<td>open</td>
+	<td>/users/acceptTerm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=TermCheck</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=TermCheck</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=TermSignature</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=TermSignature</td>
+	<td>rg</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=acceptTerm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=acceptTerm</td>
+	<td></td>
 </tr>
 <tr>
 	<td>storeLocation</td>
@@ -61,7 +91,6 @@
 	<td>${announcement}</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>

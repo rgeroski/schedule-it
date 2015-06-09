@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.dev.scheduleit.org/" />
+<title>Scheduler Search Adjuster</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Scheduler Search Adjuster</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/users/account</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Choose Adjuster</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Choose Adjuster</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=section.mainsectn &gt; h3</td>
+	<td>Create Schedule</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=adjuster</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=l_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=searchButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=searchButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.formErrorContent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=l_name</td>
+	<td>Geroski</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=searchButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='tab1']/table/tbody/tr/td[4]</td>
+	<td>Geroski</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Enter New Claim</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Show Schedule</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Show Schedule</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=hide_show</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=hide_show</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h2</td>
+	<td>${currentMonth} ${currentYear}</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Schedule</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Schedule</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>name=data[AdjusterDetail][scheduler_name]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=AdjusterDetailAppNo</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=AdjusterDetailDayOff0</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
